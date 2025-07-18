@@ -20,8 +20,9 @@ export default function Footer() {
             />
           </div>
           <p className="text-gray-400 text-sm">
-            SR POINT CARS is committed to providing premium car care services
-            with precision and passion to make your car always look its best.
+            SR POINT CARS berkomitmen untuk menyediakan layanan perawatan mobil
+            premium dengan presisi dan semangat untuk membuat mobil Anda selalu
+            terlihat terbaik.
           </p>
         </div>
 
@@ -31,12 +32,12 @@ export default function Footer() {
             Booking Newsletter
           </h3>
           <p className="text-gray-400 text-sm mb-4">
-            Get the latest news and exclusive offers by subscribing:
+            Dapatkan berita terbaru dan penawaran eksklusif dengan berlangganan:
           </p>
           <form className="flex flex-col sm:flex-row gap-2">
             <input
               type="email"
-              placeholder="Your email"
+              placeholder="Masukan Email Anda"
               className="px-4 py-2 flex-grow rounded bg-gray-800 text-sm placeholder-gray-400 focus:outline-none"
             />
             <button

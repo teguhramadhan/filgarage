@@ -28,9 +28,9 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-12 text-white text-lg uppercase">
-          <Link href="#home">Home</Link>
-          <Link href="#about">Services</Link>
-          <Link href="#contact">Projects</Link>
+          <Link href="/">Home</Link>
+          <Link href="/services">Services</Link>
+          <Link href="/projects">Projects</Link>
           <Link href="#contact">Workshop</Link>
           <Link href="#contact">Why Us</Link>
         </div>
@@ -73,19 +73,39 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
             className="md:hidden px-2 pt-2 pb-3 space-y-1 uppercase text-white"
           >
-            <Link href="#home" className="block px-2 py-4">
+            <Link
+              href="/"
+              className="block px-2 py-4"
+              onClick={() => setIsOpen(false)}
+            >
               Home
             </Link>
-            <Link href="#about" className="block px-2 py-4">
+            <Link
+              href="/services"
+              className="block px-2 py-4"
+              onClick={() => setIsOpen(false)}
+            >
               Services
             </Link>
-            <Link href="#contact" className="block px-2 py-4">
+            <Link
+              href="/projects"
+              className="block px-2 py-4"
+              onClick={() => setIsOpen(false)}
+            >
               Projects
             </Link>
-            <Link href="#contact" className="block px-2 py-4">
+            <Link
+              href="#contact"
+              className="block px-2 py-4"
+              onClick={() => setIsOpen(false)}
+            >
               Workshop
             </Link>
-            <Link href="#contact" className="block px-2 py-4">
+            <Link
+              href="#contact"
+              className="block px-2 py-4"
+              onClick={() => setIsOpen(false)}
+            >
               Why Us
             </Link>
           </motion.div>

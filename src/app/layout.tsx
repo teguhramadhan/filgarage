@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Bebas_Neue } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 // Import Inter
 const inter = Inter({
@@ -28,7 +30,9 @@ export default function RootLayout({
   return (
     <html>
       <body className={`${inter.variable} ${bebasNeue.variable} antialiased`}>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
