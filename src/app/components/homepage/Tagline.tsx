@@ -36,28 +36,27 @@ export default function Tagline() {
         </motion.div>
       </div>
 
-      {/* SLOGAN */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-        className="w-full flex justify-center px-4 py-4 mt-12"
-      >
-        <h1 className="text-4xl md:text-7xl text-gray-700 font-bebas text-center leading-tight">
-          Good <span className="text-primary">Car,</span> Good{" "}
-          <span className="text-primary">Treatment</span>
-        </h1>
-      </motion.div>
-
       {/* ABOUT US */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-        className="w-full px-4 lg:px-8 pb-20"
+        className="w-full px-4 lg:px-8 py-20"
       >
+        {/* SLOGAN */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          className="w-full flex justify-center px-4"
+        >
+          <h1 className="text-4xl md:text-7xl text-gray-700 font-bebas text-center leading-tight lg:mb-12">
+            Good <span className="text-primary">Car,</span> Good{" "}
+            <span className="text-primary">Treatment</span>
+          </h1>
+        </motion.div>
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-24">
           {/* Kiri: Gambar */}
           <motion.div
@@ -65,7 +64,7 @@ export default function Tagline() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-            className="w-full md:w-1/2 flex justify-center"
+            className="w-full md:w-2/3 flex justify-center"
           >
             <Image
               src="/images/home/tagline/tagline_img.png"
@@ -84,26 +83,23 @@ export default function Tagline() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
             className="w-full"
           >
-            <div className="text-gray-700 text-md md:text-lg lg:text-2xl text-justify md:text-justify">
+            <div className="text-gray-700 text-md md:text-lg lg:text-3xl text-justify md:text-justify">
               <p>
-                Owning a good car also means paying special attention to its
-                exterior maintenance. Proper exterior maintenance not only
-                enhances your car&apos;s appearance but also protects its
-                investment value.
+                Memiliki mobil yang baik berarti juga harus memberikan perhatian
+                khusus pada perawatan eksteriornya. Perawatan eksterior yang
+                tepat tidak hanya meningkatkan penampilan mobil Anda tetapi juga
+                melindungi nilai investasinya.
               </p>
               <p>
-                Regularly washing your car to remove dirt, dust, and stone chips
-                is an essential foundational step. Using the right cleaning
-                products and proper washing techniques will prevent scratches on
-                the paint. Furthermore, regular coating provides an additional
-                layer of protection against UV rays, acid rain, and other
-                elements that can damage the paint and appearance of the car.
+                Rutin mencuci mobil untuk menghilangkan kotoran, debu, dan Stone
+                Chip adalah langkah dasar yang penting. Penggunaan produk
+                pembersih yang tepat dan teknik pencucian yang benar akan
+                mencegah goresan pada cat.
               </p>
               <p>
-                With proper exterior maintenance, your car will not only always
-                look clean and shiny but also be protected from long-term
-                damage, ensuring it stays looking new and running smoothly on
-                every trip.
+                Selain itu, coating secara berkala akan memberikan lapisan
+                pelindung tambahan terhadap sinar UV, hujan asam, dan elemen
+                lainnya yang dapat merusak cat dan tampilan mobil.
               </p>
             </div>
           </motion.div>

@@ -1,0 +1,106 @@
+"use client";
+
+import {
+  FaCheckCircle,
+  FaStar,
+  FaShieldAlt,
+  FaUsers,
+  FaAward,
+} from "react-icons/fa";
+
+export default function WhyUsDesc() {
+  const reasons = [
+    {
+      title: "Komitmen terhadap Kepuasan Pelanggan",
+      desc: "SR Point memiliki kebijakan layanan purna jual yang baik, siap membantu dan menyelesaikan masalah jika ada ketidakpuasan terhadap hasil layanan.",
+      icon: <FaUsers className="w-8 h-8" />,
+    },
+    {
+      title: "Ulasan Positif dari Pelanggan",
+      desc: "Banyak pelanggan yang memberikan ulasan positif tentang SR Point, menunjukkan tingkat kepuasan yang tinggi dan kepercayaan terhadap layanan yang diberikan.",
+      icon: <FaStar className="w-8 h-8" />,
+    },
+    {
+      title: "Profesionalisme dan Keahlian",
+      desc: "SR Point memiliki teknisi yang berpengalaman dan terlatih dalam berbagai jenis treatment mobil, memastikan setiap layanan dilakukan dengan standar profesional tinggi.",
+      icon: <FaShieldAlt className="w-8 h-8" />,
+    },
+    {
+      title: "Material dan Produk Berkualitas",
+      desc: "SR Point menggunakan bahan dan produk berkualitas tinggi dalam setiap treatment, menjamin hasil yang tahan lama dan memuaskan.",
+      icon: <FaAward className="w-8 h-8" />,
+    },
+  ];
+
+  return (
+    <section className="w-full py-20 px-4 md:px-12 bg-gray-50 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto text-center mb-16 relative z-10">
+        <div className="inline-flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-sm text-sm font-medium mb-4">
+          <FaCheckCircle className="w-4 h-4" />
+          Mengapa Memilih Kami
+        </div>
+
+        <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight font-bebas">
+          Why Choose SR Point Cars
+        </h2>
+
+        <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+          Alasan kenapa pelanggan mempercayai kami sebagai partner terbaik untuk
+          perawatan kendaraan Anda
+        </p>
+      </div>
+
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 relative z-10">
+        {reasons.map((item, index) => (
+          <div
+            key={index}
+            className="group relative bg-white p-8 rounded-sm shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 hover:-translate-y-2"
+          >
+            {/* Gradient background on hover */}
+            <div className="absolute inset-0 bg-primary/5 rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+            <div className="relative z-10">
+              {/* Icon with primary background */}
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-sm bg-primary text-white mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                {item.icon}
+              </div>
+
+              <h3 className="text-xl md:text-2xl font-bold mb-4 text-gray-900 group-hover:text-primary transition-colors uppercase">
+                {item.title}
+              </h3>
+
+              <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors">
+                {item.desc}
+              </p>
+            </div>
+
+            {/* Decorative corner */}
+            <div className="absolute top-0 right-0 w-20 h-20 bg-primary/10 rounded-sm opacity-50"></div>
+          </div>
+        ))}
+      </div>
+
+      {/* Bottom CTA section */}
+      <div className="max-w-7xl mx-auto text-center mt-16 relative z-10">
+        <div className="bg-primary rounded-sm p-8 shadow-2xl text-white">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">
+            Siap Memberikan Layanan Terbaik untuk Kendaraan Anda
+          </h3>
+          <p className="text-white/80 mb-6 text-lg">
+            Bergabunglah dengan ribuan pelanggan yang telah merasakan kepuasan
+            layanan SR Point
+          </p>
+          <button className="bg-white text-primary px-8 py-3 rounded-sm font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl">
+            Hubungi Kami Sekarang
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}

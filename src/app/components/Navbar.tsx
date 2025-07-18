@@ -31,8 +31,8 @@ export default function Navbar() {
           <Link href="/">Home</Link>
           <Link href="/services">Services</Link>
           <Link href="/projects">Projects</Link>
-          <Link href="#contact">Workshop</Link>
-          <Link href="#contact">Why Us</Link>
+          <Link href="/workshop">Workshop</Link>
+          <Link href="/whyus">Why Us</Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -95,14 +95,14 @@ export default function Navbar() {
               Projects
             </Link>
             <Link
-              href="#contact"
+              href="/workshop"
               className="block px-2 py-4"
               onClick={() => setIsOpen(false)}
             >
               Workshop
             </Link>
             <Link
-              href="#contact"
+              href="/whyus"
               className="block px-2 py-4"
               onClick={() => setIsOpen(false)}
             >

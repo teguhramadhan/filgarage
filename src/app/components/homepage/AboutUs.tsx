@@ -35,12 +35,14 @@ export default function AboutUs() {
                 About Us
               </h2>
               <p className="text-gray-700 text-md md:text-lg lg:text-3xl text-justify md:text-start mb-6">
-                SR POINT CARS is a leading company specializing in car care,
-                offering coating, detailing, PPF (Paint Protection Film), and
-                anti-rust protection services. We prioritize quality and detail
-                in every service we provide, using the latest technology and
-                materials to ensure your car remains protected and
-                well-maintained.
+                SR Point adalah pilihan terbaik untuk Anda yang peduli terhadap
+                perawatan mobil dengan kualitas terbaik. Sebagai ahli dalam
+                layanan coating, detailing, PPF (Paint Protection Film), dan
+                perlindungan anti karat, kami menghadirkan kombinasi sempurna
+                antara keahlian teknis tinggi dan perhatian terhadap detail.
+                Setiap mobil yang kami tangani tidak hanya mendapatkan perlakuan
+                istimewa untuk penampilan yang memukau, tetapi juga perlindungan
+                yang kokoh dari cuaca, debu, dan kerusakan lainnya
               </p>
             </div>
           </motion.div>
@@ -56,12 +58,13 @@ export default function AboutUs() {
             {/* Kiri: Desc */}
             <div className="w-full">
               <p className="text-gray-700 text-md md:text-lg lg:text-3xl text-justify md:text-start">
-                Entrust your car to our professional detailers at SR Point for
-                exceptional care that will leave it looking like new again. With
-                extensive expertise in coating, detailing, and car protection,
-                our team is ready to deliver top-quality and satisfying results
-                every time you visit. Discover the real difference with our
-                dedicated detailers, only at SR Point.
+                Percayakan mobil Anda kepada detailer profesional kami di SR
+                Point untuk mendapatkan perlakuan istimewa yang membuatnya
+                tampak seperti baru kembali. Dengan keahlian mendalam dalam
+                coating, detailing, dan perlindungan mobil, tim kami siap
+                memberikan kualitas terbaik dan hasil yang memuaskan setiap kali
+                Anda berkunjung. Temukan perbedaan yang nyata dengan layanan
+                detailer kami yang berdedikasi hanya di SR Point.
               </p>
             </div>
             {/* Kanan: Title */}

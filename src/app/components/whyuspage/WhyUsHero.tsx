@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-export default function OurServicesHero() {
+export default function WhyUsHero() {
   const ref = useRef<HTMLDivElement>(null);
 
   // Hook scroll progress section
@@ -23,7 +23,7 @@ export default function OurServicesHero() {
       {/* Background image with parallax */}
       <motion.div
         style={{
-          backgroundImage: "url('/images/services/hero-bg.jpeg')",
+          backgroundImage: "url('/images/whyus/whyushero-bg.jpeg')",
           y: y,
         }}
         className="absolute inset-0 bg-cover bg-center will-change-transform"
@@ -40,9 +40,9 @@ export default function OurServicesHero() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 text-center text-white"
       >
-        <h1 className="text-4xl md:text-7xl font-bebas mb-4">Our Services</h1>
+        <h1 className="text-4xl md:text-7xl font-bebas mb-4">our advantages</h1>
         <p className="text-lg md:text-xl font-thin uppercase">
-          Home / <span className="font-bold">Services</span>
+          Home / <span className="font-bold">Why Us</span>
         </p>
       </motion.div>
     </section>
