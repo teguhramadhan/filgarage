@@ -54,7 +54,7 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="relative w-full min-h-screen overflow-hidden text-white"
+      className="relative w-full min-h-screen overflow-hidden text-white pt-20 bg-black"
     >
       {/* BG */}
       <Image

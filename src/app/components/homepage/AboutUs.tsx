@@ -34,7 +34,7 @@ export default function AboutUs() {
               <h2 className="text-4xl md:text-7xl font-bebas text-primary leading-tight lg:mb-6">
                 About Us
               </h2>
-              <p className="text-gray-700 text-md md:text-lg lg:text-3xl text-justify md:text-start mb-6">
+              <p className="text-gray-700 text-md md:text-lg lg:text-3xl text-justify mb-6">
                 SR Point adalah pilihan terbaik untuk Anda yang peduli terhadap
                 perawatan mobil dengan kualitas terbaik. Sebagai ahli dalam
                 layanan coating, detailing, PPF (Paint Protection Film), dan
@@ -57,7 +57,7 @@ export default function AboutUs() {
           >
             {/* Kiri: Desc */}
             <div className="w-full">
-              <p className="text-gray-700 text-md md:text-lg lg:text-3xl text-justify md:text-start">
+              <p className="text-gray-700 text-md md:text-lg lg:text-3xl text-justify">
                 Percayakan mobil Anda kepada detailer profesional kami di SR
                 Point untuk mendapatkan perlakuan istimewa yang membuatnya
                 tampak seperti baru kembali. Dengan keahlian mendalam dalam
@@ -121,7 +121,7 @@ export default function AboutUs() {
           </div>
           <div className="max-w-7xl mx-auto flex justify-end items-end mt-4">
             <button className="bg-primary text-white inline-flex justify-center items-center gap-2 lg:gap-4 px-4 lg:px-8 py-2 lg:py-4 rounded-xs text-xs lg:text-lg uppercase font-semibold">
-              See our Gallery
+              See our Projects
               <LiaLongArrowAltRightSolid className="w-8 h-8" />
             </button>
           </div>

@@ -1,22 +1,59 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import Loader from "./Loader";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const pathname = usePathname();
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Deteksi route change kalau klik Link
+  useEffect(() => {
+    const handleStart = () => setLoading(true);
+    const handleComplete = () => setLoading(false);
+
+    // NOTE: useRouter dari next/navigation di App Router TIDAK punya .events
+    // Workaround: detect pathname change
+    setLoading(false); // disable loader pas pertama load
+  }, [pathname]);
+
+  const handleLinkClick = (href: string) => {
+    setLoading(true);
+    router.push(href);
+  };
 
   return (
-    <nav className="w-full bg-primary shadow-md">
-      <div className="max-w-full px-4 sm:px-28 lg:px-32 flex items-center justify-between h-20">
+    <nav
+      className={`w-full fixed top-0 left-0 z-50 shadow-md transition-all duration-300 ${
+        isScrolled ? "bg-black/60 backdrop-blur" : "bg-black"
+      }`}
+    >
+      {loading && <Loader />}
+
+      <div className="max-w-full px-4 sm:px-28 lg:px-32 flex items-center justify-between h-16 md:h-24">
         {/* Logo */}
         <div className="flex-shrink-0 w-28 sm:w-32 md:w-40">
-          <Link href="/">
+          <Link href="/" onClick={() => handleLinkClick("/")}>
             <Image
-              src="/images/home/logo/logo_nav.png"
+              src="/images/home/logo/logo_nav_default.png"
               alt="My Logo"
               width={200}
               height={60}
@@ -28,11 +65,26 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-12 text-white text-lg uppercase">
-          <Link href="/">Home</Link>
-          <Link href="/services">Services</Link>
-          <Link href="/projects">Projects</Link>
-          <Link href="/workshop">Workshop</Link>
-          <Link href="/whyus">Why Us</Link>
+          {[
+            { href: "/", label: "Home" },
+            { href: "/services", label: "Services" },
+            { href: "/pricelist", label: "Price List" },
+            { href: "/projects", label: "Projects" },
+            { href: "/workshop", label: "Workshop" },
+            { href: "/whyus", label: "Why Us" },
+          ].map(({ href, label }) => (
+            <button
+              key={href}
+              onClick={() => handleLinkClick(href)}
+              className={`uppercase ${
+                pathname === href
+                  ? "text-primary font-bold border-b border-primary"
+                  : ""
+              }`}
+            >
+              {label}
+            </button>
+          ))}
         </div>
 
         {/* Mobile Menu Button */}
@@ -73,41 +125,27 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
             className="md:hidden px-2 pt-2 pb-3 space-y-1 uppercase text-white"
           >
-            <Link
-              href="/"
-              className="block px-2 py-4"
-              onClick={() => setIsOpen(false)}
-            >
-              Home
-            </Link>
-            <Link
-              href="/services"
-              className="block px-2 py-4"
-              onClick={() => setIsOpen(false)}
-            >
-              Services
-            </Link>
-            <Link
-              href="/projects"
-              className="block px-2 py-4"
-              onClick={() => setIsOpen(false)}
-            >
-              Projects
-            </Link>
-            <Link
-              href="/workshop"
-              className="block px-2 py-4"
-              onClick={() => setIsOpen(false)}
-            >
-              Workshop
-            </Link>
-            <Link
-              href="/whyus"
-              className="block px-2 py-4"
-              onClick={() => setIsOpen(false)}
-            >
-              Why Us
-            </Link>
+            {[
+              { href: "/", label: "Home" },
+              { href: "/services", label: "Services" },
+              { href: "/pricelist", label: "Price List" },
+              { href: "/projects", label: "Projects" },
+              { href: "/workshop", label: "Workshop" },
+              { href: "/whyus", label: "Why Us" },
+            ].map(({ href, label }) => (
+              <button
+                key={href}
+                onClick={() => {
+                  handleLinkClick(href);
+                  setIsOpen(false);
+                }}
+                className={`block w-full text-left px-2 py-4 ${
+                  pathname === href ? "text-white font-bold bg-primary" : ""
+                }`}
+              >
+                {label}
+              </button>
+            ))}
           </motion.div>
         )}
       </AnimatePresence>

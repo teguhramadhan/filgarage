@@ -29,7 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <body className={`${inter.variable} ${bebasNeue.variable} antialiased`}>
+      <body
+        className={`${inter.variable} ${bebasNeue.variable} antialiased font-inter`}
+      >
         <Navbar />
         {children}
         <Footer />
