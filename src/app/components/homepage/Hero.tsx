@@ -95,10 +95,17 @@ export default function Hero() {
             <span className="max-w-2xl text-2xl md:text-6xl text-gray-200 font-bebas text-center md:text-left">
               Reserve Your Exclusive Treatment Today.
             </span>
-            <button className="bg-primary hover:bg-primary-dark inline-flex justify-center items-center gap-4 px-8 py-4 rounded-xs text-lg uppercase font-semibold">
-              Book Now
-              <LiaLongArrowAltRightSolid className="w-8 h-8" />
-            </button>
+            <a
+              href="https://wa.me/6282120748682?text=Halo%2C%20saya%20ingin%20booking%20treatment%20coating%20di%20SR%20Point%20Cars%20untuk%20mobil%20saya.%20Boleh%20dibantu%3F"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative inline-flex justify-center items-center overflow-hidden px-8 py-4 text-lg uppercase font-semibold rounded-xs bg-primary text-white hover:bg-primary/80"
+            >
+              <span className="relative z-10 flex items-center gap-4">
+                Book Now
+                <LiaLongArrowAltRightSolid className="w-8 h-8" />
+              </span>
+            </a>
           </div>
 
           {/* Gallery + Nav */}

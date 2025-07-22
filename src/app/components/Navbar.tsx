@@ -41,11 +41,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav
-      className={`w-full fixed top-0 left-0 z-50 shadow-md transition-all duration-300 ${
-        isScrolled ? "bg-black/60 backdrop-blur" : "bg-black"
-      }`}
-    >
+    <nav className="w-full bg-black shadow-md transition-all duration-300">
       {loading && <Loader />}
 
       <div className="max-w-full px-4 sm:px-28 lg:px-32 flex items-center justify-between h-16 md:h-24">

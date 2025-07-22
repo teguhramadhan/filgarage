@@ -29,7 +29,7 @@ export default function Loader() {
           duration: 2,
           ease: "easeInOut",
         }}
-        className="text-white text-xl uppercase tracking-widest mt-6"
+        className="text-white text-sm lg:text-xl uppercase tracking-widest mt-6"
       >
         Sedang Memuat...
       </motion.p>
