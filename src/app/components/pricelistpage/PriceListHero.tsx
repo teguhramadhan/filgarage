@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-export default function PriceListHero() {
+export default function OurServicesHero() {
   const ref = useRef<HTMLDivElement>(null);
 
   // Hook scroll progress section
@@ -18,7 +18,7 @@ export default function PriceListHero() {
   return (
     <section
       ref={ref}
-      className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden pt-20 md:pt-24"
+      className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden"
     >
       {/* Background image with parallax */}
       <motion.div
@@ -29,8 +29,14 @@ export default function PriceListHero() {
         className="absolute inset-0 bg-cover bg-center will-change-transform"
       />
 
-      {/* Overlay */}
+      {/* Primary color overlay with geometric pattern */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+      {/* Geometric accent elements */}
+      <div className="absolute top-0 left-0 w-32 h-32 bg-white opacity-20"></div>
+      <div className="absolute top-8 left-8 w-16 h-16 border-4 border-white opacity-30 animate-bounce"></div>
+      <div className="absolute bottom-0 right-0 w-40 h-40 bg-white opacity-10"></div>
+      <div className="absolute bottom-10 right-10 w-20 h-20 border-4 border-white opacity-25 animate-spin"></div>
 
       {/* Animated Text */}
       <motion.div
@@ -40,11 +46,31 @@ export default function PriceListHero() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 text-center text-white"
       >
-        <h1 className="text-4xl md:text-7xl font-bebas mb-4">Price List</h1>
-        <p className="text-lg md:text-xl font-thin uppercase">
-          Home / <span className="font-bold">Pricelist</span>
-        </p>
+        {/* Title with primary accent box */}
+        <div className="relative inline-block mb-8">
+          <h1 className="text-4xl md:text-7xl font-bebas px-8 py-4 bg-white text-primary relative z-10">
+            Price List
+          </h1>
+          {/* Accent borders */}
+          <div className="absolute -top-2 -left-2 w-full h-full border-4 border-white"></div>
+          <div className="absolute -bottom-2 -right-2 w-full h-full border-4 border-white"></div>
+        </div>
+
+        {/* Breadcrumb with enhanced styling */}
+        <div className="relative">
+          <div className="inline-block px-8 py-3">
+            <p className="text-lg md:text-xl font-thin uppercase tracking-wider">
+              Home / <span className="font-bold text-white">Pricelist</span>
+            </p>
+          </div>
+          {/* Side accents */}
+          <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-1 bg-white"></div>
+          <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-1 bg-white"></div>
+        </div>
       </motion.div>
+
+      {/* Bottom accent line */}
+      <div className="absolute bottom-0 left-0 w-full h-2 bg-white"></div>
     </section>
   );
 }

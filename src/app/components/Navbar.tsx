@@ -41,7 +41,11 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="w-full bg-black shadow-md transition-all duration-300">
+    <nav
+      className={`w-full transition-all duration-300 ${
+        isScrolled ? "bg-black shadow-lg" : "bg-black"
+      }`}
+    >
       {loading && <Loader />}
 
       <div className="max-w-full px-4 sm:px-28 lg:px-32 flex items-center justify-between h-16 md:h-24">
@@ -72,10 +76,10 @@ export default function Navbar() {
             <button
               key={href}
               onClick={() => handleLinkClick(href)}
-              className={`uppercase ${
+              className={`uppercase transition-all duration-300 px-4 py-2 border-2 ${
                 pathname === href
-                  ? "text-primary font-bold border-b border-primary"
-                  : ""
+                  ? "text-primary font-bold bg-white border-white"
+                  : "text-white border-transparent hover:border-white hover:bg-white hover:text-primary"
               }`}
             >
               {label}
@@ -87,7 +91,7 @@ export default function Navbar() {
         <div className="md:hidden">
           <motion.button
             onClick={() => setIsOpen(!isOpen)}
-            className="relative w-8 h-8 flex items-center justify-center md:w-10 md:h-10"
+            className="relative w-8 h-8 flex items-center justify-center md:w-10 md:h-10 p-2 border-2 border-white bg-transparent hover:bg-white hover:text-primary transition-colors duration-300"
             aria-label="Menu"
           >
             <motion.div
@@ -96,7 +100,7 @@ export default function Navbar() {
               transition={{ duration: 0.3 }}
               className="absolute"
             >
-              <FaBars className="w-6 h-6 md:w-8 md:h-8 text-white" />
+              <FaBars className="w-4 h-4 md:w-6 md:h-6 text-current" />
             </motion.div>
 
             <motion.div
@@ -105,7 +109,7 @@ export default function Navbar() {
               transition={{ duration: 0.3 }}
               className="absolute"
             >
-              <FaTimes className="w-6 h-6 md:w-8 md:h-8 text-white" />
+              <FaTimes className="w-4 h-4 md:w-6 md:h-6 text-current" />
             </motion.div>
           </motion.button>
         </div>
@@ -119,7 +123,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden px-2 pt-2 pb-3 space-y-1 uppercase text-white"
+            className="md:hidden px-2 pt-2 pb-3 space-y-1 uppercase text-white bg-primary border-t border-white/20"
           >
             {[
               { href: "/", label: "Home" },
@@ -135,8 +139,10 @@ export default function Navbar() {
                   handleLinkClick(href);
                   setIsOpen(false);
                 }}
-                className={`block w-full text-left px-2 py-4 ${
-                  pathname === href ? "text-white font-bold bg-primary" : ""
+                className={`block w-full text-left px-4 py-4 border-2 transition-all duration-300 ${
+                  pathname === href
+                    ? "text-primary font-bold bg-white border-white"
+                    : "text-white border-transparent hover:border-white hover:bg-white hover:text-primary"
                 }`}
               >
                 {label}

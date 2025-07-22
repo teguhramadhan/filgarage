@@ -1,83 +1,88 @@
 "use client";
-
 import Image from "next/image";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-black text-white px-4 py-12 md:py-16">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row flex-wrap justify-between gap-12 md:gap-8">
-        {/* Kiri: Logo + Desc */}
-        <div className="w-full md:flex-1 max-w-md">
-          <div className="mb-4">
-            <Image
-              src="/images/home/footer/logo_footer.png"
-              alt="Logo"
-              width={150}
-              height={50}
-              className="object-contain"
-            />
+    <footer className="bg-black text-white py-16">
+      <div className="container mx-auto px-4">
+        {/* Main Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          {/* Kiri: Logo + Desc */}
+          <div className="space-y-6">
+            <div className="flex items-center space-x-3">
+              <Image
+                src="/images/home/footer/logo_footer.png"
+                alt="SR Point Cars Logo"
+                width={120}
+                height={120}
+                className="object-contain"
+              />
+            </div>
+            <p className="text-white/80 leading-relaxed">
+              SR POINT CARS berkomitmen untuk menyediakan layanan perawatan
+              mobil premium dengan presisi dan semangat untuk membuat mobil Anda
+              selalu terlihat terbaik.
+            </p>
           </div>
-          <p className="text-gray-400 text-sm leading-relaxed">
-            SR POINT CARS berkomitmen untuk menyediakan layanan perawatan mobil
-            premium dengan presisi dan semangat untuk membuat mobil Anda selalu
-            terlihat terbaik.
-          </p>
-        </div>
 
-        {/* Newsletter Booking */}
-        <div className="w-full md:flex-1 max-w-md">
-          <h3 className="text-lg font-bold mb-4 uppercase">
-            Booking Newsletter
-          </h3>
-          <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-            Dapatkan berita terbaru dan penawaran eksklusif dengan berlangganan:
-          </p>
-          <form className="flex flex-col sm:flex-row gap-2">
-            <input
-              type="email"
-              placeholder="Masukan Email Anda"
-              className="px-4 py-2 flex-grow rounded bg-gray-800 text-sm placeholder-gray-400 focus:outline-none"
-            />
-            <button
-              type="submit"
-              className="px-6 py-2 bg-primary hover:bg-primary-dark rounded text-sm uppercase font-semibold"
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
+          {/* Newsletter Booking */}
+          <div className="space-y-6">
+            <h3 className="text-xl font-semibold text-white">
+              Booking Newsletter
+            </h3>
+            <p className="text-white/80">
+              Dapatkan berita terbaru dan penawaran eksklusif dengan
+              berlangganan:
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <input
+                type="email"
+                placeholder="Masukkan email Anda"
+                className="flex-1 px-4 py-3 bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50"
+              />
+              <button className="px-6 py-3 bg-white text-primary font-semibold hover:bg-white/90 transition-colors">
+                Subscribe
+              </button>
+            </div>
+          </div>
 
-        {/* Contact Us */}
-        <div className="w-full md:flex-1 max-w-md">
-          <h3 className="text-lg font-bold mb-4 uppercase">Contact Us</h3>
-          <ul className="text-gray-400 text-sm space-y-6">
-            <li>
-              <div className="flex items-start gap-4">
-                <FaMapMarkerAlt className="text-xl text-red-600 flex-shrink-0" />
-                <span className="leading-relaxed">
+          {/* Contact Us */}
+          <div className="space-y-6">
+            <h3 className="text-xl font-semibold text-white">Contact Us</h3>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <FaMapMarkerAlt
+                  className="text-white mt-1 flex-shrink-0"
+                  size={18}
+                />
+                <p className="text-white/80 leading-relaxed">
                   JLN. PASIRLUYU SELATAN NO.25D REGOL BANDUNG
-                </span>
+                </p>
               </div>
-            </li>
-            <li>
-              <a
-                href="https://wa.me/6282120748682"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 hover:text-emerald-400 transition"
-              >
-                <IoLogoWhatsapp className="text-xl text-emerald-600 flex-shrink-0" />
-                +62 821 2074 8682
-              </a>
-            </li>
-          </ul>
+              <div className="flex items-center space-x-3">
+                <IoLogoWhatsapp
+                  className="text-white flex-shrink-0"
+                  size={18}
+                />
+                <a
+                  href="https://wa.me/6282120748682"
+                  className="text-white/80 hover:text-white transition-colors"
+                >
+                  +62 821 2074 8682
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div className="mt-12 text-center text-gray-500 text-xs">
-        &copy; {new Date().getFullYear()} SR POINT CARS. All rights reserved.
+        {/* Copyright */}
+        <div className="border-t border-white/20 mt-12 pt-8 text-center">
+          <p className="text-white/70">
+            © {new Date().getFullYear()} SR POINT CARS. All rights reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );

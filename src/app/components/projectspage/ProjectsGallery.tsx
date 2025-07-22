@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function GallerySection() {
   return (
-    <section className="w-full px-4 md:px-12 lg:px-32 py-16">
-      <h2 className="text-3xl md:text-5xl font-bebas text-center mb-12">
+    <section className="w-full px-4 md:px-12 lg:px-32 py-16 bg-gray-50">
+      <h2 className="text-3xl md:text-5xl font-bebas text-center mb-12 text-primary">
         Our Gallery
       </h2>
 
@@ -13,7 +13,7 @@ export default function GallerySection() {
         {[1, 2, 3, 4, 5, 6].map((num) => (
           <div
             key={num}
-            className="relative w-full aspect-[4/3] overflow-hidden rounded-lg group"
+            className="relative w-full aspect-[4/3] overflow-hidden group shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
             {/* Image */}
             <Image
@@ -24,12 +24,12 @@ export default function GallerySection() {
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <div className="absolute inset-0 bg-primary bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
               <button
                 onClick={() =>
                   window.open(`/images/gallery/${num}.png`, "_blank")
                 }
-                className="bg-primary text-white px-6 py-3 rounded-full uppercase font-semibold hover:bg-opacity-90 transition"
+                className="bg-white text-primary px-8 py-3 uppercase font-semibold hover:bg-gray-100 transition-colors border-2 border-white"
               >
                 View Image
               </button>
@@ -39,7 +39,7 @@ export default function GallerySection() {
       </div>
 
       <div className="mt-12 flex justify-center">
-        <button className="bg-primary text-white px-8 py-4 rounded-full uppercase font-semibold hover:bg-opacity-90 transition">
+        <button className="bg-primary text-white px-12 py-4 uppercase font-semibold hover:bg-primary/90 transition-colors border-2 border-primary hover:border-primary/90">
           See Gallery
         </button>
       </div>

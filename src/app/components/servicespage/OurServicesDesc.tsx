@@ -79,29 +79,41 @@ function ServiceBlock({
           reverse ? "items-end text-right" : ""
         }`}
       >
-        <h1
-          className={`w-fit font-bebas text-4xl md:text-6xl bg-primary text-white py-4 md:py-6 ${
-            reverse
-              ? "pl-16 md:pl-24 pr-8 md:pr-12 rounded-tl-full"
-              : "pl-8 md:pl-12 pr-16 md:pr-24 rounded-tr-full"
-          }`}
-        >
-          {title}
-        </h1>
-        <p className="text-lg md:text-2xl leading-relaxed text-justify mt-6">
-          {description}
-        </p>
+        {/* Title with geometric shape */}
+        <div className="relative w-fit mb-12">
+          <h1 className="font-bebas text-4xl md:text-6xl bg-primary text-white py-6 md:py-8 px-12 md:px-16 relative z-10">
+            {title}
+          </h1>
+          {/* Geometric accent */}
+          <div
+            className={`absolute top-0 w-12 md:w-16 h-full bg-white ${
+              reverse
+                ? "-left-6 md:-left-8 border-l-12 md:border-l-16 border-l-primary"
+                : "-right-6 md:-right-8 border-r-12 md:border-r-16 border-r-primary"
+            }`}
+          />
+        </div>
+
+        {/* Enhanced description box */}
+        <div className="relative">
+          <div className="absolute top-0 left-0 w-3 h-full bg-primary" />
+          <p className="text-lg md:text-2xl leading-relaxed text-justify pl-12 pr-8 py-8 bg-gray-50 border-l-6 border-primary">
+            {description}
+          </p>
+        </div>
       </div>
 
-      {/* Gambar */}
+      {/* Gambar with enhanced styling */}
       <div className="w-full flex justify-center">
-        <Image
-          src={image}
-          alt={title}
-          width={600}
-          height={400}
-          className="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-lg object-cover"
-        />
+        <div className="relative group max-w-3xl overflow-hidden w-full">
+          <Image
+            src={image}
+            alt={title}
+            width={1920}
+            height={1080}
+            className="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
       </div>
     </motion.div>
   );

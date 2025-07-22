@@ -1,35 +1,16 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
-export default function OurServicesHero() {
-  const ref = useRef<HTMLDivElement>(null);
-
-  // Hook scroll progress section
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
-  // Buat translateY - Parallax
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-
+export default function WorkshopHero() {
   return (
-    <section
-      ref={ref}
-      className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden"
-    >
-      {/* Background image with parallax */}
-      <motion.div
-        style={{
-          backgroundImage: "url('/images/services/hero-bg.jpeg')",
-          y: y,
-        }}
-        className="absolute inset-0 bg-cover bg-center will-change-transform"
+    <section className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/workshop/workshop_bg.jpeg')" }}
       />
 
-      {/* Primary color overlay with geometric pattern */}
+      {/* Primary color overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
       {/* Geometric accent elements */}
@@ -49,7 +30,7 @@ export default function OurServicesHero() {
         {/* Title with primary accent box */}
         <div className="relative inline-block mb-8">
           <h1 className="text-4xl md:text-7xl font-bebas px-8 py-4 bg-white text-primary relative z-10">
-            Our Services
+            Workshop
           </h1>
           {/* Accent borders */}
           <div className="absolute -top-2 -left-2 w-full h-full border-4 border-white"></div>
@@ -60,7 +41,7 @@ export default function OurServicesHero() {
         <div className="relative">
           <div className="inline-block px-8 py-3">
             <p className="text-lg md:text-xl font-thin uppercase tracking-wider">
-              Home / <span className="font-bold text-white">Services</span>
+              Home / <span className="font-bold text-white">Workshop</span>
             </p>
           </div>
           {/* Side accents */}
