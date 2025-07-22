@@ -102,15 +102,6 @@ export default function Hero() {
           transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
           className="absolute bottom-20 right-10 w-32 h-32 bg-primary opacity-15"
         ></motion.div>
-
-        <motion.div
-          animate={{
-            scaleY: [1, 3, 1],
-            x: [0, 20, -20, 0],
-          }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/3 right-1/3 w-6 h-48 bg-white opacity-20"
-        ></motion.div>
       </div>
 
       {/* Side Accent Bars */}
@@ -118,14 +109,14 @@ export default function Hero() {
         initial={{ height: 0 }}
         animate={isInView ? { height: "100%" } : { height: 0 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="absolute left-0 top-0 w-4 bg-primary z-10"
+        className="absolute left-0 top-0 hidden md:block w-1 lg:w-4 bg-primary/70 z-10"
       ></motion.div>
 
       <motion.div
         initial={{ height: 0 }}
         animate={isInView ? { height: "100%" } : { height: 0 }}
         transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
-        className="absolute right-0 top-0 w-4 bg-white z-10"
+        className="absolute right-0 top-0 hidden md:block w-1 lg:w-4 bg-white/70 z-10"
       ></motion.div>
 
       {/* Content */}
@@ -176,13 +167,9 @@ export default function Hero() {
             {/* CTA Section */}
             <div className="lg:col-span-2 space-y-8">
               <div className="space-y-6">
-                <h2
-                  className="text-3xl md:text-5xl font-black text-white leading-tight"
-                  style={{ fontFamily: "Impact, Arial Black, sans-serif" }}
-                >
+                <h2 className="text-3xl md:text-5xl font-black text-white leading-tight font-bebas">
                   RESERVE YOUR
-                  <br />
-                  <span className="text-primary">EXCLUSIVE</span>
+                  <span className="text-primary"> EXCLUSIVE</span>
                   <br />
                   TREATMENT TODAY
                 </h2>
