@@ -47,7 +47,7 @@ export default function WhyUsDesc() {
         </div>
 
         <h2 className="text-4xl md:text-6xl font-bold text-primary mb-6 leading-tight font-bebas">
-          Why Choose SR Point Cars
+          Keunggulan SR POINT CARS
         </h2>
 
         <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">

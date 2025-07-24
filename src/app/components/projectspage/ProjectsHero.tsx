@@ -49,7 +49,7 @@ export default function OurServicesHero() {
         {/* Title with primary accent box */}
         <div className="relative inline-block mb-8">
           <h1 className="text-4xl md:text-7xl font-bebas px-8 py-4 bg-white text-primary relative z-10">
-            This Is Our Project
+            Project Kami
           </h1>
           {/* Accent borders */}
           <div className="absolute -top-2 -left-2 w-full h-full border-4 border-white"></div>

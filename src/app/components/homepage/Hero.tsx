@@ -141,11 +141,11 @@ export default function Hero() {
           ></motion.div>
 
           <h1 className="text-5xl md:text-8xl lg:text-9xl font-black leading-none mb-6 font-bebas">
-            <span className="text-primary">GOOD CAR </span>
-            DESERVES
+            <span className="text-primary">Mobil yang bagus </span>
+            layak
             <br />
-            EXCEPTIONAL
-            <span className="text-primary"> TREATMENT</span>
+            mendapatkan
+            <span className="text-primary"> perawatan yang luar biasa</span>
           </h1>
 
           <motion.div
@@ -168,17 +168,18 @@ export default function Hero() {
             <div className="lg:col-span-2 space-y-8">
               <div className="space-y-6">
                 <h2 className="text-3xl md:text-5xl font-black text-white leading-tight font-bebas">
-                  RESERVE YOUR
-                  <span className="text-primary"> EXCLUSIVE</span>
+                  PESAN PERAWATAN
                   <br />
-                  TREATMENT TODAY
+                  <span className="text-primary"> EKSKLUSIF ANDA</span>
+                  <br />
+                  HARI INI
                 </h2>
 
                 <div className="w-20 h-1 bg-primary"></div>
 
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  Experience premium automotive care that your vehicle deserves.
-                  Professional treatment with exceptional results.
+                  Nikmati perawatan otomotif premium yang layak untuk kendaraan
+                  Anda. Perawatan profesional dengan hasil luar biasa.
                 </p>
               </div>
 
@@ -206,13 +207,13 @@ export default function Hero() {
                 <div className="text-center">
                   <div className="text-3xl font-black text-primary">500+</div>
                   <div className="text-sm uppercase tracking-wider text-gray-400">
-                    Cars Treated
+                    Mobil Dirawat
                   </div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-black text-white">100%</div>
                   <div className="text-sm uppercase tracking-wider text-gray-400">
-                    Satisfaction
+                    Pelanggan Puas
                   </div>
                 </div>
               </div>
@@ -223,11 +224,8 @@ export default function Hero() {
               {/* Gallery Header */}
               <div className="flex justify-between items-center mb-6">
                 <div>
-                  <h3
-                    className="text-2xl font-black text-white mb-2"
-                    style={{ fontFamily: "Impact, Arial Black, sans-serif" }}
-                  >
-                    OUR WORK
+                  <h3 className="text-2xl font-black text-white mb-2 font-bebas">
+                    Pekerjaan kami
                   </h3>
                   <div className="w-12 h-1 bg-primary"></div>
                 </div>

@@ -6,7 +6,7 @@ export default function GallerySection() {
   return (
     <section className="w-full px-4 md:px-12 lg:px-32 py-16 bg-gray-50">
       <h2 className="text-3xl md:text-5xl font-bebas text-center mb-12 text-primary">
-        Our Gallery
+        Galeri Kami
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -40,7 +40,7 @@ export default function GallerySection() {
 
       <div className="mt-12 flex justify-center">
         <button className="bg-primary text-white px-12 py-4 uppercase font-semibold hover:bg-primary/90 transition-colors border-2 border-primary hover:border-primary/90">
-          See Gallery
+          Lihat Semua
         </button>
       </div>
     </section>

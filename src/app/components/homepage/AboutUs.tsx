@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function AboutUs() {
   return (
-    <section className="w-full min-h-screen py-20 px-4 lg:px-8 bg-white">
+    <section className="w-full min-h-screen pt-20 bg-white">
       <div className="flex flex-col gap-2 lg:gap-32">
         <div className="flex flex-col gap-12 lg:gap-20">
           {/* About Us */}
@@ -31,7 +31,7 @@ export default function AboutUs() {
               <div className="absolute bottom-6 left-6">
                 <div className="w-20 h-1 bg-white mb-2"></div>
                 <h3 className="text-white text-xl font-bold">
-                  QUALITY SERVICE
+                  LAYANAN BERKUALITAS
                 </h3>
               </div>
             </div>
@@ -39,10 +39,10 @@ export default function AboutUs() {
             {/* Kanan: Konten */}
             <div className="w-full lg:w-2/5 p-8 lg:p-12 flex flex-col justify-center bg-white relative">
               <div className="absolute top-0 left-0 w-2 h-16 bg-primary"></div>
-              <h2 className="text-5xl lg:text-6xl font-bebas text-primary mb-6 leading-tight">
-                ABOUT
+              <h2 className="text-5xl lg:text-6xl font-bebas text-primary mb-6 leading-tight uppercase">
+                Tentang
                 <br />
-                US
+                Kami
               </h2>
               <div className="w-12 h-1 bg-primary mb-6"></div>
               <p className="text-gray-800 text-base lg:text-lg leading-relaxed text-justify mb-6">
@@ -103,7 +103,7 @@ export default function AboutUs() {
                   EXPERT TOOLS
                 </h3>
                 <p className="text-gray-600 text-sm mt-2">
-                  Professional Equipment
+                  Peralatan Profesional
                 </p>
               </div>
             </div>
@@ -124,18 +124,16 @@ export default function AboutUs() {
               <div className="flex flex-col">
                 <div className="w-16 h-1 bg-white mb-4"></div>
                 <h2 className="text-5xl lg:text-8xl font-bebas text-white leading-tight">
-                  THE
-                  <br />
-                  PROCESS
+                  Proses
                 </h2>
                 <p className="text-gray-200 text-lg mt-4 max-w-md">
-                  From consultation to final touch, witness our professional
-                  workflow
+                  Dari konsultasi hingga sentuhan akhir, saksikan alur kerja
+                  profesional kami
                 </p>
               </div>
               <div className="mt-8 lg:mt-0">
                 <button className="bg-white text-primary inline-flex justify-center items-center gap-2 lg:gap-4 px-6 lg:px-10 py-3 lg:py-5 text-sm lg:text-lg uppercase font-bold hover:bg-gray-100 transition-colors">
-                  See our Projects
+                  Lihat Project Kami
                   <LiaLongArrowAltRightSolid className="w-6 h-6 lg:w-8 lg:h-8" />
                 </button>
               </div>
@@ -156,7 +154,7 @@ export default function AboutUs() {
                   <div className="w-8 h-1 bg-white mb-2"></div>
                   <h3 className="text-white text-xl font-bold">STEP 01</h3>
                   <p className="text-gray-200 text-sm">
-                    Consultation & Assessment
+                    Konsultasi & Penilaian
                   </p>
                 </div>
               </div>
@@ -173,9 +171,7 @@ export default function AboutUs() {
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-transparent to-transparent p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                   <div className="w-8 h-1 bg-white mb-2"></div>
                   <h3 className="text-white text-xl font-bold">STEP 02</h3>
-                  <p className="text-gray-200 text-sm">
-                    Professional Treatment
-                  </p>
+                  <p className="text-gray-200 text-sm">Perawatan Profesional</p>
                 </div>
               </div>
 
@@ -191,7 +187,7 @@ export default function AboutUs() {
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-transparent to-transparent p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                   <div className="w-8 h-1 bg-white mb-2"></div>
                   <h3 className="text-white text-xl font-bold">STEP 03</h3>
-                  <p className="text-gray-200 text-sm">Quality Inspection</p>
+                  <p className="text-gray-200 text-sm">Inspeksi Kualitas</p>
                 </div>
               </div>
             </div>

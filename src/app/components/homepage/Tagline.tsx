@@ -41,7 +41,7 @@ export default function Tagline() {
           </h2>
           <div className="w-12 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-lg md:text-xl lg:text-2xl text-gray-200 uppercase tracking-widest font-medium">
-            For Your Premium Car
+            Untuk Mobil Premium Anda
           </p>
         </motion.div>
       </div>
@@ -64,14 +64,14 @@ export default function Tagline() {
             className="max-w-6xl mx-auto text-center"
           >
             <div className="w-16 h-1 bg-white mx-auto mb-8"></div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl text-white font-bebas leading-tight mb-8">
-              GOOD CAR,
+            <h1 className="text-5xl md:text-7xl lg:text-8xl text-white font-bebas leading-tight uppercase mb-8">
+              mobil bagus,
               <br />
-              GOOD <span className="text-gray-200">TREATMENT</span>
+              perawatan <span className="text-gray-200">bagus</span>
             </h1>
             <p className="text-gray-200 text-lg lg:text-xl max-w-2xl mx-auto">
-              Excellence in automotive care through professional expertise and
-              premium service quality
+              Keunggulan dalam perawatan otomotif melalui keahlian profesional
+              dan kualitas layanan premium
             </p>
           </motion.div>
         </div>
@@ -142,7 +142,7 @@ export default function Tagline() {
                     <div className="w-3 h-3 bg-white"></div>
                   </div>
                   <p className="text-primary font-bold uppercase text-sm">
-                    Professional Care Standards
+                    Standar Perawatan Profesional
                   </p>
                 </div>
               </div>

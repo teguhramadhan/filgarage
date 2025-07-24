@@ -42,7 +42,7 @@ export default function Footer() {
                 placeholder="Masukkan email Anda"
                 className="flex-1 px-4 py-3 bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50"
               />
-              <button className="px-6 py-3 bg-white text-primary font-semibold hover:bg-white/90 transition-colors">
+              <button className="px-6 py-3 bg-primary text-white font-semibold hover:bg-primary/90 transition-colors">
                 Subscribe
               </button>
             </div>

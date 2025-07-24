@@ -54,7 +54,7 @@ function InfoBlocks() {
 
       {/* Kontak */}
       <div className="bg-white p-6 shadow-lg border-l-4 border-primary">
-        <h2 className="text-2xl md:text-3xl font-inter uppercase font-bold text-primary mb-4">
+        <h2 className="text-xl md:text-2xl font-inter uppercase font-bold text-primary mb-4">
           Kontak Kami
         </h2>
         <div className="space-y-3">
@@ -78,7 +78,7 @@ function InfoBlocks() {
         rel="noopener noreferrer"
         className="bg-primary text-white w-fit hover:bg-primary/90 transition-colors inline-flex justify-center items-center gap-4 px-8 py-4 text-lg uppercase font-semibold mt-6 shadow-lg border-2 border-primary hover:border-primary/90"
       >
-        OPEN WORKSHOP IN MAP
+        Buka Workshop di Map
         <LiaLongArrowAltRightSolid className="w-8 h-8" />
       </a>
     </div>
@@ -97,11 +97,11 @@ function InfoCard({
 }) {
   return (
     <div className="bg-white p-6 shadow-lg border-l-4 border-primary">
-      <h2 className="text-2xl md:text-3xl font-inter uppercase font-bold text-primary mb-4">
+      <h2 className="text-xl md:text-2xl font-inter uppercase font-bold text-primary mb-6">
         {title}
       </h2>
-      <p className="w-full flex flex-row justify-start items-start gap-4 text-lg text-gray-700 leading-relaxed">
-        <span className="mt-1 flex-shrink-0">{icon}</span>
+      <p className="w-full flex flex-row justify-start items-center gap-4 text-md text-gray-700 leading-relaxed">
+        <span className="flex-shrink-0">{icon}</span>
         <span>{text}</span>
       </p>
     </div>
