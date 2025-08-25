@@ -27,11 +27,6 @@ export default function Navbar() {
 
   // Deteksi route change kalau klik Link
   useEffect(() => {
-    const handleStart = () => setLoading(true);
-    const handleComplete = () => setLoading(false);
-
-    // NOTE: useRouter dari next/navigation di App Router TIDAK punya .events
-    // Workaround: detect pathname change
     setLoading(false); // disable loader pas pertama load
   }, [pathname]);
 
@@ -57,7 +52,6 @@ export default function Navbar() {
               alt="My Logo"
               width={200}
               height={60}
-              className="w-full h-auto"
               priority
             />
           </Link>
@@ -91,7 +85,7 @@ export default function Navbar() {
         <div className="md:hidden">
           <motion.button
             onClick={() => setIsOpen(!isOpen)}
-            className="relative w-8 h-8 flex items-center justify-center md:w-10 md:h-10 p-2 border-2 border-white bg-transparent hover:bg-white hover:text-primary transition-colors duration-300"
+            className="relative w-8 h-8 flex items-center justify-center md:w-10 md:h-10 p-2 bg-transparent hover:text-primary transition-colors duration-300"
             aria-label="Menu"
           >
             <motion.div
@@ -100,7 +94,7 @@ export default function Navbar() {
               transition={{ duration: 0.3 }}
               className="absolute"
             >
-              <FaBars className="w-4 h-4 md:w-6 md:h-6 text-current" />
+              <FaBars className="w-4 h-4 md:w-6 md:h-6 text-current text-white" />
             </motion.div>
 
             <motion.div
@@ -109,7 +103,7 @@ export default function Navbar() {
               transition={{ duration: 0.3 }}
               className="absolute"
             >
-              <FaTimes className="w-4 h-4 md:w-6 md:h-6 text-current" />
+              <FaTimes className="w-4 h-4 md:w-6 md:h-6 text-current text-white" />
             </motion.div>
           </motion.button>
         </div>
@@ -123,7 +117,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden px-2 pt-2 pb-3 space-y-1 uppercase text-white bg-primary border-t border-white/20"
+            className="md:hidden min-h-full pb-3 uppercase text-white bg-black border-t border-white/20"
           >
             {[
               { href: "/", label: "Home" },
@@ -139,10 +133,10 @@ export default function Navbar() {
                   handleLinkClick(href);
                   setIsOpen(false);
                 }}
-                className={`block w-full text-left px-4 py-4 border-2 transition-all duration-300 ${
+                className={`block w-full text-left px-4 py-4 transition-all duration-300 ${
                   pathname === href
-                    ? "text-primary font-bold bg-white border-white"
-                    : "text-white border-transparent hover:border-white hover:bg-white hover:text-primary"
+                    ? "text-white font-bold bg-primary"
+                    : "text-white bg-black"
                 }`}
               >
                 {label}

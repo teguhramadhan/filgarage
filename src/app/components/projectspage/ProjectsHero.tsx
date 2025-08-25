@@ -32,12 +32,6 @@ export default function OurServicesHero() {
       {/* Primary color overlay with geometric pattern */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-      {/* Geometric accent elements */}
-      <div className="absolute top-0 left-0 w-32 h-32 bg-white opacity-20"></div>
-      <div className="absolute top-8 left-8 w-16 h-16 border-4 border-white opacity-30 animate-bounce"></div>
-      <div className="absolute bottom-0 right-0 w-40 h-40 bg-white opacity-10"></div>
-      <div className="absolute bottom-10 right-10 w-20 h-20 border-4 border-white opacity-25 animate-spin"></div>
-
       {/* Animated Text */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}

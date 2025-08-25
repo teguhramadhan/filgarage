@@ -73,7 +73,7 @@ function InfoBlocks() {
 
       {/* Tombol */}
       <a
-        href="https://goo.gl/maps/X8w6BbkCQZBcA4Jk7"
+        href="https://www.google.com/maps?ll=-6.946105,107.621143&z=16&t=m&hl=id&gl=ID&mapclient=embed&cid=85483445794973194"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-primary text-white w-fit hover:bg-primary/90 transition-colors inline-flex justify-center items-center gap-4 px-8 py-4 text-lg uppercase font-semibold mt-6 shadow-lg border-2 border-primary hover:border-primary/90"

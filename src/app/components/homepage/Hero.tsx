@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 
 const galleryImages = [
   {
@@ -140,7 +141,7 @@ export default function Hero() {
             className="h-1 bg-white mx-auto mb-8"
           ></motion.div>
 
-          <h1 className="text-5xl md:text-8xl lg:text-9xl font-black leading-none mb-6 font-bebas">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-none mb-6 font-bebas">
             <span className="text-primary">Mobil yang bagus </span>
             layak
             <br />
@@ -278,10 +279,11 @@ export default function Hero() {
                       transition={{ duration: 0.3 }}
                     >
                       <div className="relative overflow-hidden bg-gray-200 aspect-square">
-                        <img
+                        <Image
                           src={image.src}
                           alt={image.alt}
-                          className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                          fill
+                          className="object-cover hover:scale-110 transition-transform duration-500"
                         />
 
                         {/* Image Overlay */}
