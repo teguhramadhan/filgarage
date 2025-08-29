@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
 const galleryImages = [
   {
@@ -131,7 +132,7 @@ export default function Hero() {
             <br />
 
             <span className="text-primary text-xl md:text-2xl lg:text-4xl uppercase">
-              Hadir untuk kendaraan terbaik Anda
+              Autocare & Modification
             </span>
           </h1>
 
@@ -154,7 +155,7 @@ export default function Hero() {
             {/* CTA Section */}
             <div className="lg:col-span-2 space-y-8">
               <div className="space-y-6">
-                <h2 className="text-3xl md:text-5xl font-black text-white leading-tight font-bebas">
+                <h2 className="text-xl md:text-3xl font-black text-white leading-tight font-bebas">
                   LAYANAN
                   <br />
                   <span className="text-primary"> EKSKLUSIF FIL GARAGE</span>
@@ -162,13 +163,19 @@ export default function Hero() {
 
                 <div className="w-20 h-1 bg-primary"></div>
 
-                <ul className="text-gray-300 text-lg leading-relaxed space-y-3 list-disc list-inside">
+                <ul className="text-gray-300 text-sm lg:text-lg leading-relaxed space-y-3 list-disc list-inside">
                   <li>VELG NEW & SEC</li>
                   <li>OLI MOBIL</li>
                   <li>CAT VELG, POLES, BRUSH DIAMOND</li>
                   <li>
-                    AUDIO SYSTEM (Subwoofer, Head Unit, Custom Full Setup)
+                    AUDIO SYSTEM
+                    <ol className="list-none ml-6">
+                      <li className="italic">Subwoofer</li>
+                      <li className="italic">Head Unit</li>
+                      <li className="italic">Custom Full Setup</li>
+                    </ol>
                   </li>
+
                   <li>LAMPU CUSTOM Bi-LED</li>
                 </ul>
               </div>
@@ -188,7 +195,7 @@ export default function Hero() {
                   transition={{ duration: 1.5, repeat: Infinity }}
                   className="text-2xl group-hover:translate-x-2 transition-transform"
                 >
-                  →
+                  <FaArrowRightLong className="w-6 h-6" />
                 </motion.div>
               </motion.a>
 
@@ -214,7 +221,7 @@ export default function Hero() {
               {/* Gallery Header */}
               <div className="flex justify-between items-center mb-6">
                 <div>
-                  <h3 className="text-2xl font-black text-white mb-2 font-bebas">
+                  <h3 className="text-2xl font-black text-white mb-2">
                     Pekerjaan kami
                   </h3>
                   <div className="w-12 h-1 bg-primary"></div>
@@ -233,7 +240,7 @@ export default function Hero() {
                         : "bg-primary hover:bg-white hover:text-black"
                     }`}
                   >
-                    ←
+                    <FaArrowLeftLong className="w-6 h-6" />
                   </motion.button>
                   <motion.button
                     whileHover={{ scale: 1.1 }}
@@ -246,7 +253,7 @@ export default function Hero() {
                         : "bg-primary hover:bg-white hover:text-black"
                     }`}
                   >
-                    →
+                    <FaArrowRightLong className="w-6 h-6" />
                   </motion.button>
                 </div>
               </div>

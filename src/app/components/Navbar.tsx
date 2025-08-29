@@ -37,7 +37,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`w-full transition-all duration-300 ${
+      className={`w-full transition-all duration-300 border-b border-white/5 ${
         isScrolled ? "bg-black shadow-lg" : "bg-black"
       }`}
     >
@@ -59,7 +59,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-12 text-white text-lg uppercase">
+        <div className="hidden h-full md:flex items-center gap-12 text-white text-lg uppercase">
           {[
             { href: "/", label: "Home" },
             { href: "/services", label: "Services" },
@@ -71,10 +71,8 @@ export default function Navbar() {
             <button
               key={href}
               onClick={() => handleLinkClick(href)}
-              className={`uppercase transition-all duration-300 px-4 py-2 border-2 ${
-                pathname === href
-                  ? "text-primary font-bold bg-white border-white"
-                  : "text-white border-transparent hover:border-white hover:bg-white hover:text-primary"
+              className={`uppercase transition-all duration-300 px-4 ${
+                pathname === href ? "text-white font-bold" : "text-white/50"
               }`}
             >
               {label}
