@@ -77,8 +77,8 @@ export default function Hero() {
           className="absolute inset-0"
           style={{
             backgroundImage: `
-              linear-gradient(90deg, #E6212A 1px, transparent 1px),
-              linear-gradient(180deg, #E6212A 1px, transparent 1px)
+              linear-gradient(90deg, #29392E 1px, transparent 1px),
+              linear-gradient(180deg, #29392E 1px, transparent 1px)
             `,
             backgroundSize: "80px 80px",
           }}
@@ -105,21 +105,6 @@ export default function Hero() {
         ></motion.div>
       </div>
 
-      {/* Side Accent Bars */}
-      <motion.div
-        initial={{ height: 0 }}
-        animate={isInView ? { height: "100%" } : { height: 0 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-        className="absolute left-0 top-0 hidden md:block w-1 lg:w-4 bg-primary/70 z-10"
-      ></motion.div>
-
-      <motion.div
-        initial={{ height: 0 }}
-        animate={isInView ? { height: "100%" } : { height: 0 }}
-        transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
-        className="absolute right-0 top-0 hidden md:block w-1 lg:w-4 bg-white/70 z-10"
-      ></motion.div>
-
       {/* Content */}
       <div className="relative z-20 flex flex-col justify-center items-center min-h-screen px-6 py-20">
         {/* Main Heading */}
@@ -141,12 +126,13 @@ export default function Hero() {
             className="h-1 bg-white mx-auto mb-8"
           ></motion.div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-none mb-6 font-bebas">
-            <span className="text-primary">Mobil yang bagus </span>
-            layak
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-none mb-6 font-orbitron">
+            <span className="text-white">FIL GARAGE</span>
             <br />
-            mendapatkan
-            <span className="text-primary"> perawatan yang luar biasa</span>
+
+            <span className="text-primary text-xl md:text-2xl lg:text-4xl uppercase">
+              Hadir untuk kendaraan terbaik Anda
+            </span>
           </h1>
 
           <motion.div
@@ -169,31 +155,34 @@ export default function Hero() {
             <div className="lg:col-span-2 space-y-8">
               <div className="space-y-6">
                 <h2 className="text-3xl md:text-5xl font-black text-white leading-tight font-bebas">
-                  PESAN PERAWATAN
+                  LAYANAN
                   <br />
-                  <span className="text-primary"> EKSKLUSIF ANDA</span>
-                  <br />
-                  HARI INI
+                  <span className="text-primary"> EKSKLUSIF FIL GARAGE</span>
                 </h2>
 
                 <div className="w-20 h-1 bg-primary"></div>
 
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  Nikmati perawatan otomotif premium yang layak untuk kendaraan
-                  Anda. Perawatan profesional dengan hasil luar biasa.
-                </p>
+                <ul className="text-gray-300 text-lg leading-relaxed space-y-3 list-disc list-inside">
+                  <li>VELG NEW & SEC</li>
+                  <li>OLI MOBIL</li>
+                  <li>CAT VELG, POLES, BRUSH DIAMOND</li>
+                  <li>
+                    AUDIO SYSTEM (Subwoofer, Head Unit, Custom Full Setup)
+                  </li>
+                  <li>LAMPU CUSTOM Bi-LED</li>
+                </ul>
               </div>
 
               {/* CTA Button */}
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="https://wa.me/6282120748682?text=Halo%2C%20saya%20ingin%20booking%20treatment%20coating%20di%20SR%20Point%20Cars%20untuk%20mobil%20saya.%20Boleh%20dibantu%3F"
+                href="https://wa.me/6282120748682?text=Halo%2C%20saya%20ingin%20booking%20layanan%20di%20FIL%20GARAGE.%20Boleh%20dibantu%3F"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-4 px-10 py-5 bg-primary text-white font-black uppercase text-lg tracking-wider hover:bg-white hover:text-black transition-all duration-300 group"
               >
-                BOOK NOW
+                HUBUNGI KAMI
                 <motion.div
                   animate={{ x: [0, 5, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
@@ -323,14 +312,6 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
-
-      {/* Bottom Accent */}
-      <motion.div
-        initial={{ scaleX: 0 }}
-        animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
-        transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-white to-primary origin-left"
-      ></motion.div>
     </section>
   );
 }

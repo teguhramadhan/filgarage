@@ -4,11 +4,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        inter: ["var(--font-inter)"],
-        bebas: ["var(--font-bebas-neue)"],
+        outfit: ["var(--font-outfit)"],
+        archivo: ["var(--font-archivo-black)"],
+        orbitron: ["var(--font-orbitron)"],
+        sans: ["var(--font-outfit)"], // default font = Outfit
       },
       colors: {
-        primary: "#E6212A", // Blue
+        primary: "#566D5D",
       },
     },
   },

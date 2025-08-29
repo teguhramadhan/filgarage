@@ -23,7 +23,7 @@ export default function WorkshopHero() {
       >
         {/* Title with primary accent box */}
         <div className="relative inline-block mb-8">
-          <h1 className="text-4xl md:text-7xl font-bebas px-8 py-4 bg-white text-primary relative z-10">
+          <h1 className="text-2xl md:text-4xl font-bebas px-8 py-4 bg-white text-primary relative z-10 font-orbitron uppercase font-bold">
             Workshop
           </h1>
           {/* Accent borders */}

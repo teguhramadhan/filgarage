@@ -12,13 +12,14 @@ export default function Footer() {
           {/* Kiri: Logo + Desc */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-              <Image
+              {/* <Image
                 src="/images/home/footer/logo_footer.png"
                 alt="SR Point Cars Logo"
                 width={120}
                 height={120}
                 className="object-contain"
-              />
+              /> */}
+              <h2 className="text-white">LOGO FIL GARAGE</h2>
             </div>
             <p className="text-white/80 leading-relaxed">
               SR POINT CARS berkomitmen untuk menyediakan layanan perawatan

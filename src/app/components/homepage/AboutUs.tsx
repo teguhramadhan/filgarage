@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function AboutUs() {
   return (
-    <section className="w-full min-h-screen pt-20 bg-white">
+    <section className="w-full min-h-screen lg:mt-12 bg-white">
       <div className="flex flex-col gap-2 lg:gap-32">
         <div className="flex flex-col gap-12 lg:gap-20">
           {/* About Us */}
@@ -45,16 +45,28 @@ export default function AboutUs() {
                 Kami
               </h2>
               <div className="w-12 h-1 bg-primary mb-6"></div>
-              <p className="text-gray-800 text-base lg:text-lg leading-relaxed text-justify mb-6">
-                SR Point adalah pilihan terbaik untuk Anda yang peduli terhadap
-                perawatan mobil dengan kualitas terbaik. Sebagai ahli dalam
-                layanan coating, detailing, PPF (Paint Protection Film), dan
-                perlindungan anti karat, kami menghadirkan kombinasi sempurna
-                antara keahlian teknis tinggi dan perhatian terhadap detail.
+              <p className="text-gray-800 text-base lg:text-lg leading-relaxed text-justify md:text-start mb-6">
+                FIL GARAGE adalah pilihan terbaik untuk Anda yang ingin
+                memberikan sentuhan eksklusif pada kendaraan. Kami tidak hanya
+                fokus pada tampilan, tetapi juga menghadirkan performa dan
+                kenyamanan melalui layanan unggulan. Mulai dari
+                <span className="font-semibold">
+                  {" "}
+                  velg new & SEC, oli mobil, cat velg, poles, brush diamond,
+                  hingga
+                </span>
+                <span className="font-semibold">
+                  {" "}
+                  audio system (subwoofer, head unit, custom full setup)
+                </span>
+                <span className="font-semibold"> dan lampu custom Bi-LED</span>,
+                semuanya tersedia di satu tempat.
               </p>
+
               <p className="text-gray-600 text-sm lg:text-base leading-relaxed">
-                Setiap mobil yang kami tangani tidak hanya tampil memukau tetapi
-                juga terlindungi dari cuaca, debu, dan kerusakan lainnya.
+                Setiap detail dikerjakan oleh tim profesional untuk memastikan
+                mobil Anda tampil menawan, berkualitas tinggi, dan siap melaju
+                dengan percaya diri.
               </p>
             </div>
           </motion.div>

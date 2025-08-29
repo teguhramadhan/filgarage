@@ -81,7 +81,7 @@ function ServiceBlock({
       >
         {/* Title with geometric shape */}
         <div className="relative w-fit mb-12">
-          <h1 className="font-bebas text-4xl md:text-6xl bg-primary text-white py-6 md:py-8 px-12 md:px-16 relative z-10">
+          <h1 className="font-bebas text-xl md:text-4xl bg-primary text-white py-6 md:py-8 px-12 md:px-16 relative z-10 font-orbitron uppercase font-semibold">
             {title}
           </h1>
           {/* Geometric accent */}

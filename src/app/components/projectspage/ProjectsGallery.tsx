@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function GallerySection() {
   return (
     <section className="w-full px-4 md:px-12 lg:px-32 py-16 bg-gray-50">
-      <h2 className="text-3xl md:text-5xl font-bebas text-center mb-12 text-primary">
+      <h2 className="text-xl md:text-4xl font-bebas text-center mb-12 text-primary font-orbitron uppercase font-semibold">
         Galeri Kami
       </h2>
 
