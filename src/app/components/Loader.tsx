@@ -12,14 +12,13 @@ export default function Loader() {
       className="fixed inset-0 bg-black flex flex-col items-center justify-center z-[9999]"
     >
       <div className="mb-2">
-        {/* <Image
-          src="/images/home/logo/logo_nav_default.png"
+        <Image
+          src="/images/logo/main_logo_notext.png"
           alt="Loading Logo"
           width={208} // atau sesuai ukuran logo asli
           height={80} // sesuaikan rasio asli
           priority
-        /> */}
-        <h2 className="text-white">LOGO FIL GARAGE</h2>
+        />
       </div>
 
       <motion.p
@@ -30,7 +29,7 @@ export default function Loader() {
           duration: 2,
           ease: "easeInOut",
         }}
-        className="text-white text-sm lg:text-xl uppercase tracking-widest mt-6"
+        className="text-white text-xs lg:text-sm uppercase tracking-widest mt-6"
       >
         Sedang Memuat...
       </motion.p>

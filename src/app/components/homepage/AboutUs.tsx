@@ -135,7 +135,7 @@ export default function AboutUs() {
             <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between mb-12">
               <div className="flex flex-col">
                 <div className="w-16 h-1 bg-white mb-4"></div>
-                <h2 className="text-5xl lg:text-8xl font-bebas text-white leading-tight">
+                <h2 className="text-5xl lg:text-8xl font-bebas text-white leading-tight uppercase">
                   Proses
                 </h2>
                 <p className="text-gray-200 text-lg mt-4 max-w-md">
@@ -144,10 +144,13 @@ export default function AboutUs() {
                 </p>
               </div>
               <div className="mt-8 lg:mt-0">
-                <button className="bg-white text-primary inline-flex justify-center items-center gap-2 lg:gap-4 px-6 lg:px-10 py-3 lg:py-5 text-sm lg:text-lg uppercase font-bold hover:bg-gray-100 transition-colors">
+                <a
+                  href="/projects"
+                  className="bg-white text-primary inline-flex justify-center items-center gap-2 lg:gap-4 px-6 lg:px-10 py-3 lg:py-5 text-sm lg:text-lg uppercase font-bold hover:bg-gray-100 transition-colors"
+                >
                   Lihat Project Kami
                   <LiaLongArrowAltRightSolid className="w-6 h-6 lg:w-8 lg:h-8" />
-                </button>
+                </a>
               </div>
             </div>
 

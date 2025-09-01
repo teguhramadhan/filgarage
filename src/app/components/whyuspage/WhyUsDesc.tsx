@@ -96,9 +96,13 @@ export default function WhyUsDesc() {
             Bergabunglah dengan ribuan pelanggan yang telah merasakan kepuasan
             layanan SR Point
           </p>
-          <button className="bg-white text-primary px-12 py-4 font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl uppercase text-lg border-2 border-white hover:border-gray-100">
+          <a
+            href="https://wa.me/6282258692970?text=Halo%2C%20saya%20ingin%20booking%20layanan%20di%20FIL%20GARAGE.%20Boleh%20dibantu%3F"
+            target="_blank"
+            className="bg-white text-primary px-12 py-4 font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl uppercase text-lg border-2 border-white hover:border-gray-100"
+          >
             Hubungi Kami Sekarang
-          </button>
+          </a>
         </div>
       </div>
     </section>

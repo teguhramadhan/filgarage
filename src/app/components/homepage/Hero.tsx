@@ -184,7 +184,7 @@ export default function Hero() {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="https://wa.me/6282120748682?text=Halo%2C%20saya%20ingin%20booking%20layanan%20di%20FIL%20GARAGE.%20Boleh%20dibantu%3F"
+                href="https://wa.me/6282258692970?text=Halo%2C%20saya%20ingin%20booking%20layanan%20di%20FIL%20GARAGE.%20Boleh%20dibantu%3F"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-4 px-10 py-5 bg-primary text-white font-black uppercase text-lg tracking-wider hover:bg-white hover:text-black transition-all duration-300 group"

@@ -47,14 +47,13 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex-shrink-0 w-28 sm:w-32 md:w-40">
           <Link href="/" onClick={() => handleLinkClick("/")}>
-            {/* <Image
-              src="/images/home/logo/logo_nav_default.png"
+            <Image
+              src="/images/logo/main_logo_notext.png"
               alt="My Logo"
               width={200}
               height={60}
               priority
-            /> */}
-            <h2 className="text-white">LOGO FIL GARAGE</h2>
+            />
           </Link>
         </div>
 

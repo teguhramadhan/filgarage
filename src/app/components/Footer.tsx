@@ -12,18 +12,17 @@ export default function Footer() {
           {/* Kiri: Logo + Desc */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-              {/* <Image
-                src="/images/home/footer/logo_footer.png"
-                alt="SR Point Cars Logo"
-                width={120}
-                height={120}
+              <Image
+                src="/images/logo/main_logo_notext.png"
+                alt="Fil Garage"
+                width={200}
+                height={60}
                 className="object-contain"
-              /> */}
-              <h2 className="text-white">LOGO FIL GARAGE</h2>
+              />
             </div>
             <p className="text-white/80 leading-relaxed">
-              SR POINT CARS berkomitmen untuk menyediakan layanan perawatan
-              mobil premium dengan presisi dan semangat untuk membuat mobil Anda
+              FIL GARAGE berkomitmen untuk menyediakan layanan perawatan mobil
+              premium dengan presisi dan semangat untuk membuat mobil Anda
               selalu terlihat terbaik.
             </p>
           </div>
@@ -59,7 +58,7 @@ export default function Footer() {
                   size={18}
                 />
                 <p className="text-white/80 leading-relaxed">
-                  JLN. PASIRLUYU SELATAN NO.25D REGOL BANDUNG
+                  JLN. PASIRLUYU SELATAN NO.25D REGOL, BANDUNG
                 </p>
               </div>
               <div className="flex items-center space-x-3">
@@ -68,10 +67,11 @@ export default function Footer() {
                   size={18}
                 />
                 <a
-                  href="https://wa.me/6282120748682"
+                  href="https://wa.me/6282258692970"
                   className="text-white/80 hover:text-white transition-colors"
                 >
-                  +62 821 2074 8682
+                  +62 822-5869-2970{" "}
+                  <span className="font-bold">ADMIN (Arief Maulana)</span>
                 </a>
               </div>
             </div>
@@ -81,7 +81,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-white/20 mt-12 pt-8 text-center">
           <p className="text-white/70">
-            © {new Date().getFullYear()} SR POINT CARS. All rights reserved.
+            © {new Date().getFullYear()} FIL GARAGE. All rights reserved.
           </p>
         </div>
       </div>
